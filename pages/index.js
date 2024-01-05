@@ -1,4 +1,8 @@
 import NavBar from "@/components/NavBar";
 export default function HomePage() {
-  return <NavBar />;
+  return (
+    <div className="px-6">
+      <NavBar />
+    </div>
+  );
 }

@@ -7,32 +7,35 @@ import Image from "next/image";
 export default function NavBar() {
   const [searchInput, setSearchInput] = useState("");
   return (
-    <div>
-      <nav className="flex">
-        <Dictionary className="stroke-royal-purple w-8" />
+    <section>
+      <nav className="flex py-5 justify-between">
+        <Dictionary className="stroke-medium-gray w-8" />
         <div className="flex">
-          <p>Serif</p>
-          <ChevronDown className="stroke-royal-purple w-6" />
-        </div>
-        <div>
+          <select>
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans</option>
+            <option value="mono">Mono</option>
+          </select>
+          <span className="border-l mx-2.5"></span>
           <Moon className="w-6" />
         </div>
       </nav>
-      <div className="flex">
+      <div className="flex relative">
         <input
           type="text"
-          placeholder="Enter a word"
-          value=""
-          className="bg-grey"
+          placeholder="Type your search word"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          className="bg-light-gray focus:outline-pale-purple w-full py-1.5 pl-3 rounded-lg text-midnight-black font-bold placeholder:font-normal"
         />
         <Image
           src="./search-icon.svg"
           alt="search icon"
           width="20"
           height="20"
-          className="absolute left-36"
+          className="absolute right-1 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
-    </div>
+    </section>
   );
 }
