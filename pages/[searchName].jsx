@@ -1,3 +1,6 @@
+import NavBar from "@/components/NavBar";
+import Image from "next/image";
+
 export default function SearchName({ word }) {
   const nounDefinitions = [];
   const verbDefinitions = [];
@@ -15,9 +18,20 @@ export default function SearchName({ word }) {
     });
   });
   return (
-    <div>
-      <h1>{word[0].word}</h1>
-      <p>{word[0].phonetics[1].text}</p>
+    <div className="px-6">
+      <NavBar />
+      <div className="flex justify-between shrink-0 items-center">
+        <div>
+          <p className="text-midnight-black font-bold text-2xl ">
+            {word[0].word}
+          </p>
+          <span className="text-royal-purple">{word[0].phonetics[1].text}</span>
+        </div>
+        <button className="bg-pale-purple rounded-full p-3.5">
+          <Image src="./play.svg" alt="play button" width="20" height="20" />
+        </button>
+      </div>
+
       <p>noun</p>
       <p>Meaning</p>
       <ul>
@@ -32,7 +46,7 @@ export default function SearchName({ word }) {
           <li key={index}>{definition}</li>
         ))}
       </ul>
-      <p></p>
+      <a href={word.sourceUrls}>{word.sourceUrls}</a>
     </div>
   );
 }
