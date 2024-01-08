@@ -1,6 +1,5 @@
 import Dictionary from "./icons/Dictionary";
 import Moon from "./icons/Moon";
-import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   return (

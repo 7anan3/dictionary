@@ -21,7 +21,7 @@ export default function SearchName({ word }) {
     <div className="px-6">
       <NavBar />
       <div className="flex justify-between shrink-0 items-center">
-        <div>
+        <div className="my-5">
           <p className="text-midnight-black font-bold text-2xl ">
             {word[0].word}
           </p>
@@ -31,8 +31,11 @@ export default function SearchName({ word }) {
           <Image src="./play.svg" alt="play button" width="20" height="20" />
         </button>
       </div>
+      <div class="flex items-center">
+        <p class="mr-1.5 font-bold text-midnight-black text-base">noun</p>
+        <div class="border-t border-medium-gray flex-1"></div>
+      </div>
 
-      <p>noun</p>
       <p>Meaning</p>
       <ul>
         {nounDefinitions.map((definition, index) => (
