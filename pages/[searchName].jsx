@@ -21,11 +21,7 @@ export default function SearchName({ word }) {
   });
 
   const handlePlay = () => {
-    const audioElement = new Audio(
-      word[0].phonetics[1].audio
-        ? word[0].phonetics[1].audio
-        : word[0].phonetics[0].audio
-    );
+    const audioElement = new Audio(word[0].phonetics[1].audio);
 
     audioElement.addEventListener("playing", () => setAudioPlaying(true));
     audioElement.addEventListener("ended", () => setAudioPlaying(false));
@@ -34,11 +30,11 @@ export default function SearchName({ word }) {
   };
 
   return (
-    <div className="px-6 pb-10">
+    <div className="px-6 pb-10 dark:bg-midnight-black">
       <NavBar />
       <div className="flex justify-between shrink-0 items-center">
         <div className="my-5">
-          <p className="text-midnight-black font-bold text-2xl ">
+          <p className="text-midnight-black font-bold text-2xl dark:text-white">
             {word[0].word}
           </p>
           <span className="text-royal-purple">
@@ -56,9 +52,11 @@ export default function SearchName({ word }) {
 
       {nounDefinitions.length > 0 && (
         <div>
-          <div class="flex items-center">
-            <p class="mr-1.5 font-bold text-midnight-black text-base">noun</p>
-            <div class="border-t border-medium-gray flex-1"></div>
+          <div className="flex items-center">
+            <p className="mr-1.5 font-bold text-midnight-black text-base dark:text-white">
+              noun
+            </p>
+            <div className="border-t border-medium-gray flex-1"></div>
           </div>
 
           <section>
@@ -76,9 +74,11 @@ export default function SearchName({ word }) {
 
       {verbDefinitions.length > 0 && (
         <div>
-          <div class="flex items-center">
-            <p class="mr-1.5 font-bold text-midnight-black text-base">verb</p>
-            <div class="border-t border-medium-gray flex-1"></div>
+          <div className="flex items-center">
+            <p className="mr-1.5 font-bold text-midnight-black text-base dark:text-white">
+              verb
+            </p>
+            <div className="border-t border-medium-gray flex-1"></div>
           </div>
 
           <section>
