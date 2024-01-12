@@ -68,18 +68,31 @@ export default function SearchName({ word }) {
             </ul>
 
             <ul className="flex text-sm flex-wrap">
-              <p className="mr-4">Synonyms</p>
-              {meaning.synonyms.map((synonym, index) => {
-                return (
+              {meaning.synonyms && meaning.synonyms.length > 0 && (
+                <p className="mr-4">Synonyms : </p>
+              )}
+              {meaning.synonyms &&
+                meaning.synonyms.map((synonym, index) => (
                   <li key={index} className="text-royal-purple mr-4">
                     {synonym}
                   </li>
-                );
-              })}
+                ))}
             </ul>
           </li>
         </ul>
       ))}
+      <div className="flex flex-col">
+        <p className="text-medium-gray mt-5 mb-2">Source : </p>
+        {word[0].sourceUrls.map((source, index) => (
+          <a
+            key={index}
+            href={source}
+            className="underline underline-offset-1 inline-block"
+          >
+            {source}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
