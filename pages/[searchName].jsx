@@ -23,7 +23,7 @@ export default function SearchName({ word }) {
   };
 
   return (
-    <div className="px-6 pb-10 dark:bg-midnight-black">
+    <div className="px-6 pb-10 dark:bg-midnight-black md:px-20 lg:w-4/6 lg:m-auto">
       <NavBar />
 
       <div className="flex justify-between shrink-0 items-center">
