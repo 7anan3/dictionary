@@ -1,13 +1,13 @@
 import NavBar from "@/components/NavBar";
 import Image from "next/image";
-import { Fragment } from "react";
-import { useState, createContext } from "react";
-
-export const DarkModeContext = createContext({});
+import { Fragment, useContext } from "react";
+import { useState } from "react";
+import { DarkModeFontContext } from "@/pages/_app";
 
 export default function SearchName({ word }) {
+  const { isDarkMode, setIsDarkMode, selectedFont, setSelectedFont } =
+    useContext(DarkModeFontContext);
   const [audioPlaying, setAudioPlaying] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handlePlay = () => {
     let audioUrl;
@@ -25,14 +25,15 @@ export default function SearchName({ word }) {
     audioElement.play();
   };
 
-  console.log(isDarkMode);
-
   return (
-    <DarkModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+    <div
+      className={`${
+        isDarkMode ? "dark bg-midnight-black" : ""
+      } ${selectedFont}`}
+    >
       <div
-        className={`px-6 pb-10 ${
-          isDarkMode ? "dark bg-midnight-black" : ""
-        } md:px-20 lg:w-4/6 lg:m-auto`}
+        className="px-6 pb-10 shadow-3xl
+           md:px-20 lg:w-4/6 lg:m-auto "
       >
         <NavBar />
         <div className="flex justify-between shrink-0 items-center">
@@ -103,7 +104,7 @@ export default function SearchName({ word }) {
           ))}
         </div>
       </div>
-    </DarkModeContext.Provider>
+    </div>
   );
 }
 

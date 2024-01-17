@@ -6,35 +6,6 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "sans-serif",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji",
-      ],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
-      mono: [
-        "ui-monospace",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace",
-      ],
-    },
     extend: {
       colors: {
         "pale-purple": "#e8cff9",
@@ -44,6 +15,9 @@ module.exports = {
         "medium-gray": "#bdbdbd",
         white: "#fbfbfb",
         black: "#1f1f1f ",
+      },
+      boxShadow: {
+        "3xl": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
       },
     },
   },
