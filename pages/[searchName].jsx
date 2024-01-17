@@ -33,7 +33,7 @@ export default function SearchName({ word }) {
     >
       <div
         className="px-6 pb-10 shadow-3xl
-           md:px-20 lg:w-4/6 lg:m-auto "
+           md:px-20 lg:w-4/6 lg:m-auto"
       >
         <NavBar />
         <div className="flex justify-between shrink-0 items-center">
@@ -99,7 +99,7 @@ export default function SearchName({ word }) {
               href={source}
               className="underline underline-offset-1 inline-block dark:text-white"
             >
-              {source}
+              Click here
             </a>
           ))}
         </div>
@@ -114,11 +114,18 @@ export async function getServerSideProps(context) {
     const response = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${searchName}`
     );
+
+    if (!response.ok) {
+      return {
+        notFound: true,
+      };
+    }
+
     const data = await response.json();
 
     return {
       props: {
-        word: data,
+        word: data || null,
       },
     };
   } catch (error) {
