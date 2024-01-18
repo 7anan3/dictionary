@@ -5,10 +5,10 @@ import { useState } from "react";
 import { DarkModeFontContext } from "@/pages/_app";
 
 export default function SearchName({ word }) {
-  const { isDarkMode, setIsDarkMode, selectedFont, setSelectedFont } =
-    useContext(DarkModeFontContext);
+  const { isDarkMode, selectedFont } = useContext(DarkModeFontContext);
   const [audioPlaying, setAudioPlaying] = useState(false);
 
+  //Handle audio play
   const handlePlay = () => {
     let audioUrl;
     word[0].phonetics.forEach((phonetic) => {
@@ -29,11 +29,11 @@ export default function SearchName({ word }) {
     <div
       className={`${
         isDarkMode ? "dark bg-midnight-black" : ""
-      } ${selectedFont}`}
+      } ${selectedFont} px-6 py-6`}
     >
       <div
         className="px-6 pb-10 shadow-3xl
-           md:px-20 lg:w-4/6 lg:m-auto"
+           md:px-20 lg:w-4/6 lg:m-auto dark:shadow-4xl"
       >
         <NavBar />
         <div className="flex justify-between shrink-0 items-center">
@@ -125,7 +125,7 @@ export async function getServerSideProps(context) {
 
     return {
       props: {
-        word: data || null,
+        word: data,
       },
     };
   } catch (error) {

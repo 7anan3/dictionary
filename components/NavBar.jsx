@@ -9,10 +9,12 @@ export default function NavBar() {
   const { isDarkMode, setIsDarkMode, selectedFont, setSelectedFont } =
     useContext(DarkModeFontContext);
 
+  //Handle font selection
   const handleSelect = (e) => {
     setSelectedFont(e.target.value);
   };
 
+  // Toggle dark / light mode + Localstorage
   const toggleDarkMode = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
@@ -28,13 +30,13 @@ export default function NavBar() {
 
   return (
     <section className="dark:bg-midnight-black">
-      <nav className="flex py-5 justify-between">
-        <Dictionary className="stroke-medium-gray w-8" />
+      <nav className="flex py-5 justify-between ">
+        <Dictionary className="stroke-medium-gray w-8 shrink-0" />
         <div className="flex">
           <select
             value={selectedFont}
             onChange={handleSelect}
-            className="dark:bg-midnight-black dark:text-white border-none"
+            className="dark:bg-midnight-black dark:text-white border-none w-36"
           >
             <option value="">--Choose a font--</option>
             <option value="font-serif">Serif</option>
