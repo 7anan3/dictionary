@@ -2,11 +2,9 @@
 
 This project is about a dictionary app. Here's what it can do:
 
-# Easy Word Search
-Find words effortlessly with a simple search.
+**Easy Word Search:** Find words effortlessly with a simple search.
 
-# Comprehensive Info
-Get detailed information about words using the Free Dictionary API.
+**Comprehensive Info:** Get detailed information about words using the Free Dictionary API.
 
 # Pronunciation
 Listen to how words are pronounced.
