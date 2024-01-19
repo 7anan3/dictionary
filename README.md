@@ -14,9 +14,11 @@
   
   **Adapts Anywhere:** The layout adjusts seamlessly to your device's screen size, ensuring a great view on smartphones, tablets, or computers.
 
-
+## This project built with : 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Tailwindcss
+Mobile-first workflow
 
 ## Getting Started
 
