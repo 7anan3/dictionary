@@ -1,6 +1,8 @@
 # <p align="center">Dictionary App</p>
 
-This project is about a dictionary app. Here's what you can do:
+<p align="center">
+  This project is about a dictionary app. Here's what you can do:
+</p>
 
 <p align="center">
   **Easy Word Search:** Find words effortlessly with a simple search.
