@@ -3,6 +3,7 @@
 This project is about a dictionary app. Here's what you can do:
 
 **Easy Word Search:** Find words effortlessly with a simple search.
+---------------------
 
 **Comprehensive Info:** Get detailed information about words using the Free Dictionary API.
 
