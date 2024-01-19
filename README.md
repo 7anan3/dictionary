@@ -40,8 +40,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 <img width="556" alt="home page" src="https://github.com/HananeEL-2023/dictionary/assets/57252797/b4b9c58d-cabe-4e2b-b6f7-67f8e5332017">
 <img width="556" alt="second page" src="https://github.com/HananeEL-2023/dictionary/assets/57252797/7576214a-2bc7-4f07-a5f9-ae650a032439">
 
-## Deploy on Vercel
+## Links
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I utilize Vercel for deployment. Take a look at the site via the link below:
+- Live Site URL: [dictionary-one-snowy.vercel.app](dictionary-one-snowy.vercel.app)
