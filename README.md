@@ -1,4 +1,4 @@
-# <p align="center">Dictionary App📖 </p>
+# <p align="center">Dictionary App 📚🔍</p>
 
   This project is about a dictionary app. Here's what you can do:
 
