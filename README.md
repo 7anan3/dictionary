@@ -17,8 +17,9 @@
 ## This project built with : 
 
 - This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-- Tailwindcss
-- Mobile-first workflow
+- Utilizes Tailwind CSS for styling.
+- Follows a mobile-first workflow
+- Seamlessly integrates with an external API for dynamic data retrieval and display
 
 ## Getting Started
 
