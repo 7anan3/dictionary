@@ -1,6 +1,6 @@
 # Dictionary App
 
-This project is about a dictionary app. Here's what it can do:
+This project is about a dictionary app. Here's what you can do:
 
 **Easy Word Search:** Find words effortlessly with a simple search.
 
@@ -8,7 +8,7 @@ This project is about a dictionary app. Here's what it can do:
 
 **Pronunciation:** Listen to how words are pronounced.
 
-**Customize Fonts:** Make reading comfortable by choosing different fonts.
+**Customize Fonts:** Make reading comfortable by choosing different fonts (serif, sans serif, and monospace).
 
 **Customize Look:** Easily switch between light and dark themes for a comfy visual experience.
 
