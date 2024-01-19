@@ -37,7 +37,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Screenshots
-
+<img width="556" alt="Capture1" src="https://github.com/HananeEL-2023/dictionary/assets/57252797/b4b9c58d-cabe-4e2b-b6f7-67f8e5332017">
 
 ## Deploy on Vercel
 
