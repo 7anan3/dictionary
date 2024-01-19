@@ -2,12 +2,12 @@
 
 This project is about a dictionary app. Here's what it can do:
 
-Easy Word Search: Find words effortlessly with a simple search.
-Comprehensive Info: Get detailed information about words using the Free Dictionary API.
-Pronunciation: Listen to how words are pronounced.
-Customize Fonts: Make reading comfortable by choosing different fonts.
-Customize Look: Easily switch between light and dark themes for a comfy visual experience.
-Adapts Anywhere: The layout adjusts seamlessly to your device's screen size, ensuring a great view on smartphones, tablets, or computers.
+Easy Word Search: Find words effortlessly with a simple search.*******************************
+Comprehensive Info: Get detailed information about words using the Free Dictionary API.*******************************
+Pronunciation: Listen to how words are pronounced.*******************************
+Customize Fonts: Make reading comfortable by choosing different fonts.*******************************
+Customize Look: Easily switch between light and dark themes for a comfy visual experience.*******************************
+Adapts Anywhere: The layout adjusts seamlessly to your device's screen size, ensuring a great view on smartphones, tablets, or computers.*******************************
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
