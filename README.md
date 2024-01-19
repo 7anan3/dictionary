@@ -3,15 +3,15 @@
   This project is about a dictionary app. Here's what you can do:
 
   **Easy Word Search:** Find words effortlessly with a simple search.
-  <br>
+  
   **Comprehensive Info:** Get detailed information about words using the Free Dictionary API.
-  <br>
+  
   **Pronunciation:** Listen to how words are pronounced.
-  <br>
+  
   **Customize Fonts:** Make reading comfortable by choosing different fonts (serif, sans serif, and monospace).
-  <br>
+  
   **Customize Look:** Easily switch between light and dark themes for a comfy visual experience.
-  <br>
+  
   **Adapts Anywhere:** The layout adjusts seamlessly to your device's screen size, ensuring a great view on smartphones, tablets, or computers.
 
 
