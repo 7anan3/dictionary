@@ -1,13 +1,10 @@
 # <p align="center">Dictionary App</p>
 
-<p align="center">
   This project is about a dictionary app. Here's what you can do:
-</p>
 
-<p align="center">
-  **Easy Word Search:**Find words effortlessly with a simple search.
+  **Easy Word Search:** Find words effortlessly with a simple search.
   <br>
-  **Comprehensive Info:**Get detailed information about words using the Free Dictionary API.
+  **Comprehensive Info:** Get detailed information about words using the Free Dictionary API.
   <br>
   **Pronunciation:** Listen to how words are pronounced.
   <br>
@@ -16,7 +13,7 @@
   **Customize Look:** Easily switch between light and dark themes for a comfy visual experience.
   <br>
   **Adapts Anywhere:** The layout adjusts seamlessly to your device's screen size, ensuring a great view on smartphones, tablets, or computers.
-</p>
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
