@@ -43,4 +43,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Links
 
 I utilize Vercel for deployment. Take a look at the site via the link below:
-- Live Site URL: [dictionary-one-snowy.vercel.app](dictionary-one-snowy.vercel.app)
+- Live Site URL: [https://dictionary-one-snowy.vercel.app/](https://dictionary-one-snowy.vercel.app/)
