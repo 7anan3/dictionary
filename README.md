@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  **Easy Word Search:** Find words effortlessly with a simple search.
+  **Easy Word Search:**Find words effortlessly with a simple search.
   <br>
-  **Comprehensive Info:** Get detailed information about words using the Free Dictionary API.
+  **Comprehensive Info:**Get detailed information about words using the Free Dictionary API.
   <br>
   **Pronunciation:** Listen to how words are pronounced.
   <br>
