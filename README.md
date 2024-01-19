@@ -2,19 +2,19 @@
 
 This project is about a dictionary app. Here's what it can do:
 
-#Easy Word Search
+# Easy Word Search
 Find words effortlessly with a simple search.
 
-#Comprehensive Info
+# Comprehensive Info
 Get detailed information about words using the Free Dictionary API.
 
-#Pronunciation
+# Pronunciation
 Listen to how words are pronounced.
 
-#Customize Fonts
+# Customize Fonts
 Make reading comfortable by choosing different fonts.
 
-#Customize Look
+# Customize Look
 Easily switch between light and dark themes for a comfy visual experience.
 
 #Adapts Anywhere
