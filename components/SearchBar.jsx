@@ -1,11 +1,11 @@
-import { useState, useContext } from "react";
-import { DarkModeFontContext } from "@/pages/_app";
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useDarkModeFont } from "@/context/dark-mode-font-context";
 
 export default function SearchBar() {
   const [searchInput, setSearchInput] = useState("");
-  const { selectedFont } = useContext(DarkModeFontContext);
+  const { selectedFont } = useDarkModeFont();
   const router = useRouter();
 
   const handleSearch = () => {

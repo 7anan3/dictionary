@@ -1,13 +1,13 @@
 import Dictionary from "./icons/Dictionary";
-import SearchName from "@/pages/[searchName]";
-import { DarkModeFontContext } from "@/pages/_app";
 import Moon from "./icons/Moon";
 import Sun from "./icons/Sun";
-import { useEffect, useContext } from "react";
+import { useEffect } from "react";
+import Link from "next/link";
+import { useDarkModeFont } from "@/context/dark-mode-font-context";
 
 export default function NavBar() {
   const { isDarkMode, setIsDarkMode, selectedFont, setSelectedFont } =
-    useContext(DarkModeFontContext);
+    useDarkModeFont();
 
   //Handle font selection
   const handleSelect = (e) => {
@@ -31,8 +31,10 @@ export default function NavBar() {
   return (
     <section className="dark:bg-midnight-black">
       <nav className="flex py-5 justify-between ">
-        <Dictionary className="stroke-medium-gray w-8 shrink-0" />
-        <div className="flex">
+        <Link href="/">
+          <Dictionary className="stroke-medium-gray w-8 shrink-0" />
+        </Link>
+        <div className="flex items-center">
           <select
             value={selectedFont}
             onChange={handleSelect}

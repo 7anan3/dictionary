@@ -1,17 +1,17 @@
 import NavBar from "@/components/NavBar";
 import Image from "next/image";
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { useState } from "react";
-import { DarkModeFontContext } from "@/pages/_app";
+import { useDarkModeFont } from "@/context/dark-mode-font-context";
 
 export default function SearchName({ word }) {
-  const { isDarkMode, selectedFont } = useContext(DarkModeFontContext);
+  const { isDarkMode, selectedFont } = useDarkModeFont();
   const [audioPlaying, setAudioPlaying] = useState(false);
 
   //Handle audio play
   const handlePlay = () => {
     let audioUrl;
-    word[0].phonetics.forEach((phonetic) => {
+    word.phonetics.forEach((phonetic) => {
       if (phonetic.audio.length > 0) {
         audioUrl = phonetic.audio;
       }
@@ -29,32 +29,45 @@ export default function SearchName({ word }) {
     <div
       className={`${
         isDarkMode ? "dark bg-midnight-black" : ""
-      } ${selectedFont} px-6 py-6`}
+      } ${selectedFont} px-6 py-6 min-h-screen`}
     >
-      <div
-        className="px-6 pb-10 shadow-3xl
-           md:px-20 lg:w-4/6 lg:m-auto dark:shadow-4xl"
-      >
+      <div className="px-6 pb-10 shadow-3xl md:px-20 lg:w-4/6 lg:m-auto dark:shadow-4xl">
         <NavBar />
         <div className="flex justify-between shrink-0 items-center">
           <div className="my-5">
             <p className="text-midnight-black font-bold text-2xl dark:text-white">
-              {word[0].word}
+              {word.word}
             </p>
-            <span className="text-royal-purple ">
-              {word[0].phonetic || word[0].phonetics[1].text}
-            </span>
+            {word.phonetics.length > 0 && (
+              <span className="text-royal-purple ">
+                {word.phonetic || word.phonetics[1].text}
+              </span>
+            )}
           </div>
 
           <button
             className="bg-pale-purple rounded-full p-3.5"
             onClick={handlePlay}
           >
-            <Image src="./play.svg" alt="play button" width="20" height="20" />
+            {audioPlaying ? (
+              <Image
+                src="./pause.svg"
+                alt="play button"
+                width="20"
+                height="20"
+              />
+            ) : (
+              <Image
+                src="./play.svg"
+                alt="play button"
+                width="20"
+                height="20"
+              />
+            )}
           </button>
         </div>
 
-        {word[0].meanings.map((meaning, index) => (
+        {word.meanings.map((meaning, index) => (
           <ul key={index}>
             <p className="mb-3 mt-5 text-medium-gray">Meaning</p>
             <li className="flex items-center">
@@ -93,7 +106,7 @@ export default function SearchName({ word }) {
         ))}
         <div className="flex flex-col">
           <p className="text-medium-gray mt-5 mb-2">Source : </p>
-          {word[0].sourceUrls.map((source, index) => (
+          {word.sourceUrls.map((source, index) => (
             <a
               key={index}
               href={source}
@@ -125,11 +138,12 @@ export async function getServerSideProps(context) {
 
     return {
       props: {
-        word: data,
+        word: data[0],
       },
     };
   } catch (error) {
-    console.log("An error occured : error.message");
+    console.log("An error occured: ", error.message);
+
     return {
       props: {
         word: null,
